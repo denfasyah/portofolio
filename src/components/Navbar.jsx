@@ -1,36 +1,36 @@
 
 const Navbar = () => {
   return (
-    <div className="navbar shadow-md">
+    <div className="navbar">
       <div className="navbar-start">
-        <a href="/" className="btn btn-ghost text-xl text-black">
+        <a href="/" className="btn btn-ghost text-xl text-Blue font-bold font-hammersmith-one">
           DenDev
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="/" className="text-black">
+            <a href="/" className="text-black text-lg font-hammersmith-one">
               Home
             </a>
           </li>
           <li>
-            <a href="#about" className="text-black ">
+            <a href="#about" className="text-black text-lg font-hammersmith-one ">
               About
             </a>
           </li>
           <li>
-            <a href="menu.html" className="text-black ">
+            <a href="menu.html" className="text-black text-lg font-hammersmith-one ">
               Skills
             </a>
           </li>
           <li>
-            <a href="#testimonial" className="text-black ">
+            <a href="#testimonial" className="text-black text-lg font-hammersmith-one ">
               Portofolio
             </a>
           </li>
           <li>
-            <a href="#contact" className="text-black ">
+            <a href="#contact" className="text-black text-lg font-hammersmith-one ">
               Contact
             </a>
           </li>
@@ -43,7 +43,7 @@ const Navbar = () => {
 
           {/* sun icon */}
           <svg
-            className="swap-on fill-current w-7 h-7"
+            className="swap-on fill-Blue w-7 h-7 mb-2"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -52,7 +52,7 @@ const Navbar = () => {
 
           {/* moon icon */}
           <svg
-            className="swap-off fill-current w-7 h-7"
+            className="swap-off fill-Blue w-7 h-7 mb-2"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -63,7 +63,7 @@ const Navbar = () => {
           <div tabIndex="0" role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-7 w-7 text-black font-bold"
+              className="h-7 w-7 text-black text-lg font-hammersmith-one font-bold"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -83,7 +83,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/"
-                className="text-black hover:bg-primary focus:bg-primary"
+                className="text-black text-lg font-hammersmith-one "
               >
                 Home
               </a>
@@ -91,7 +91,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#about"
-                className="text-black hover:bg-primary focus:bg-primary"
+                className="text-black text-lg font-hammersmith-one "
               >
                 About
               </a>
@@ -99,7 +99,7 @@ const Navbar = () => {
             <li>
               <a
                 href="menu.html"
-                className="text-black hover:bg-primary focus:bg-primary"
+                className="text-black text-lg font-hammersmith-one "
               >
                 Skills
               </a>
@@ -107,7 +107,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#testimonial"
-                className="text-black hover:bg-primary focus:bg-primary"
+                className="text-black text-lg font-hammersmith-one "
               >
                 Portofolio
               </a>
@@ -115,7 +115,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#contact"
-                className="text-black hover:bg-primary focus:bg-primary"
+                className="text-black text-lg font-hammersmith-one "
               >
                 Contact
               </a>
