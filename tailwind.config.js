@@ -8,12 +8,19 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "100px",
+      padding: "10px",
     },
     extend: {
+      fontFamily: {
+        'agbalumo': ['Agbalumo', 'system-ui'],
+        'concert-one': ['Concert One', 'sans-serif'],
+        'hammersmith-one': ['Hammersmith One', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+      },
       colors: {
-        Grey: "#222430",
-        Purple: "#bf8cfa",
+        Grey: "#A6A6A6",
+        Blue: "#004AAD",
+        LightBlue: "#E5EDF7",
         White: "#fefffd",
         Background: "#1a1d26",
       },
