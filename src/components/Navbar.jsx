@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar fixed z-30 backdrop-blur-2xl bg-opacity-10">
       <div className="navbar-start">
         <Link href="/" className="btn btn-ghost text-xl text-Blue font-bold font-hammersmith-one ">
           DenDev
@@ -99,7 +99,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="menu.html"
+                href="#skills"
                  className="text-black text-lg font-hammersmith-one  "
               >
                 Skills

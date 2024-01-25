@@ -5,7 +5,7 @@ const Page = () => {
   return (
     <>
       <div className="pt-1 relative">
-        <div className="text-center mt-12">
+        <div className="text-center mt-28">
           <div className="flex items-center justify-center gap-2">
             <h3 className="text-sm lg:text-xl md:text-lg sm:text-md text-gray-500 font-hammersmith-one uppercase">
               Hi There
@@ -32,7 +32,7 @@ const Page = () => {
             alt="Anime Image"
             width={300}
             height={200}
-            className="mx-auto lg:mt-4 md:mt-7 mt-20"
+            className="mx-auto lg:mt-4 md:mt-7 sm:mt-8 mt-14"
           />
         </div>
 
@@ -82,7 +82,7 @@ const Page = () => {
       </div>
 
       {/* about */}
-      <div className="text-center bg-white pt-10 relative">
+      <div id="about" className="text-center bg-white pt-10 relative">
         <div className="flex justify-center items-center mt-10 gap-3">
           <h1 className="text-4xl text-Blue font-bold font-hammersmith-one ">
             About
