@@ -1,38 +1,39 @@
+import Link from 'next/link'
 
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-start">
-        <a href="/" className="btn btn-ghost text-xl text-Blue font-bold font-hammersmith-one ">
+        <Link href="/" className="btn btn-ghost text-xl text-Blue font-bold font-hammersmith-one ">
           DenDev
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="/" className="text-black text-lg font-hammersmith-one ">
+            <Link href="/"  className="text-black text-lg font-hammersmith-one ">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#about" className="text-black text-lg font-hammersmith-one  ">
+            <Link href="#about"  className="text-black text-lg font-hammersmith-one  ">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="menu.html" className="text-black text-lg font-hammersmith-one  ">
+            <Link href="#skills"  className="text-black text-lg font-hammersmith-one scroll-smooth">
               Skills 
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#testimonial" className="text-black text-lg font-hammersmith-one  ">
+            <Link href="#portofolio"  className="text-black text-lg font-hammersmith-one  ">
               Portofolio
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="text-black text-lg font-hammersmith-one ">
+            <Link href="#contact"  className="text-black text-lg font-hammersmith-one ">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -81,44 +82,44 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 overflow-y-auto right-0 origin-top-right absolute bg-base-100"
           >
             <li>
-              <a
+              <Link
                 href="/"
-                className="text-black text-lg font-hammersmith-one  "
+                 className="text-black text-lg font-hammersmith-one  "
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#about"
-                className="text-black text-lg font-hammersmith-one  "
+                 className="text-black text-lg font-hammersmith-one  "
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="menu.html"
-                className="text-black text-lg font-hammersmith-one  "
+                 className="text-black text-lg font-hammersmith-one  "
               >
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#testimonial"
-                className="text-black text-lg font-hammersmith-one  "
+              <Link
+                href="#portofolio"
+                 className="text-black text-lg font-hammersmith-one  "
               >
                 Portofolio
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#contact"
-                className="text-black text-lg font-hammersmith-one  "
+                 className="text-black text-lg font-hammersmith-one  "
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

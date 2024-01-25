@@ -83,7 +83,7 @@ const Page = () => {
 
       {/* about */}
       <div className="text-center bg-white pt-10 relative">
-        <div className="flex justify-center items-center mt-20 gap-3">
+        <div className="flex justify-center items-center mt-10 gap-3">
           <h1 className="text-4xl text-Blue font-bold font-hammersmith-one ">
             About
           </h1>
@@ -119,45 +119,124 @@ const Page = () => {
         </button>
       </div>
 
-      <div className="text-center bg-white pt-10 relative">
-        <div className="flex justify-center items-center mt-20 gap-3">
+      <div id="skills" className="text-center bg-white pt-10 relative">
+        <div className="flex justify-center items-center mt-10 gap-3">
           <h1 className="text-4xl text-Blue font-bold font-hammersmith-one ">
             Skills
           </h1>
           <Image
-            src="/img/about_me.gif"
-            alt="aboutgif"
+            src="/img/code.gif"
+            alt="codegif"
             width={40}
             height={30}
             className="mb-3"
           />
         </div>
-        <div className="mx-10">
-          <p className="mt-10 text-black text-lg font-bold text-left mx-auto max-w-screen-lg">
-            Hi👋 Im Adent Fallah Amorisyah, a Software Engineering student at
-            Bina Sarana Informatika University. 20 years old, I am focused on my
-            self-development journey as a Fullstack Developer. <br /> <br />
-            My education provides a strong foundation for programming and
-            software development. I am actively involved in the developer
-            community and software development projects. I believe that
-            collaboration is the key to success, and I continue to improve my
-            skills in both frontend and backend. <br /> <br /> With a high
-            passion for technology, I always follow the latest trends and try to
-            keep learning. I am committed to being a creative and efficient
-            Fullstack Developer. <br /> Lets discuss ideas, projects, or
-            collaboration opportunities!
-          </p>
+
+        <div  className="lg:flex mx-10 mt-10 bg-LightBlue p-10 rounded-xl">
+          <div className="lg:w-1/2">
+            <div className="flex justify-center gap-5 flex-wrap mr-10">
+              <div className="tooltip hover:cursor-pointer" data-tip="Html">
+                <Image
+                  src="/svg/logoHtml.svg"
+                  alt="codegif"
+                  width={60}
+                  height={60}
+                  className="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl "
+                />
+              </div>
+              <div className="tooltip hover:cursor-pointer" data-tip="Css">
+                <Image
+                  src="/svg/logoCss.svg"
+                  alt="codegif"
+                  width={60}
+                  height={60}
+                  className="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl "
+                />
+              </div>
+              <div
+                className="tooltip hover:cursor-pointer"
+                data-tip="JavaScript"
+              >
+                <Image
+                  src="/svg/logoJavascript.svg"
+                  alt="codegif"
+                  width={60}
+                  height={60}
+                  className="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl "
+                />
+              </div>
+              <div
+                className="tooltip hover:cursor-pointer"
+                data-tip="Bootstrap"
+              >
+                <Image
+                  src="/svg/logoBootstrap.svg"
+                  alt="codegif"
+                  width={60}
+                  height={60}
+                  className="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl "
+                />
+              </div>
+              <div className="tooltip hover:cursor-pointer" data-tip="Tailwind">
+                <Image
+                  src="/svg/logoTailwind.svg"
+                  alt="codegif"
+                  width={60}
+                  height={60}
+                  className="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl "
+                />
+              </div>
+              <div className="tooltip hover:cursor-pointer" data-tip="React">
+                <Image
+                  src="/svg/logoReact.svg"
+                  alt="codegif"
+                  width={60}
+                  height={60}
+                  className="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl "
+                />
+              </div>
+              <div className="tooltip hover:cursor-pointer" data-tip="Next Js">
+                <Image
+                  src="/svg/next-js.svg"
+                  alt="codegif"
+                  width={60}
+                  height={60}
+                  className="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl "
+                />
+              </div>
+            </div>
+          </div>
+          <div className="lg:w-1/2 mt-5 lg:mt-0">
+            <div className="carousel rounded-box">
+              <div className="carousel-item gap-2">
+                <Image
+                  src="/img/dev.png"
+                  alt="codegif"
+                  width={400}
+                  height={400}
+                  className="mb-3  "
+                />
+                <Image
+                  src="/img/frontend.png"
+                  alt="codegif"
+                  width={400}
+                  height={400}
+                  className="mb-3  "
+                />
+              </div>
+            </div>
+          </div>
         </div>
-
-        <button className="btn mt-5 bg-Blue text-White border-4 rounded-full border-LightBlue mb-10">
-          {" "}
-          <GrDocumentDownload />
-          Dwonload CV
-        </button>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
-
-
-
     </>
   );
 };

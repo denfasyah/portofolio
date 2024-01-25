@@ -27,4 +27,7 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
+  corePlugins: {
+    scrollBehavior: false, // Menonaktifkan scroll-behavior yang disediakan oleh Tailwind
+  },
 };
