@@ -3,29 +3,29 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-start">
-        <a href="/" className="btn btn-ghost text-xl text-Blue font-bold font-hammersmith-one">
+        <a href="/" className="btn btn-ghost text-xl text-Blue font-bold font-hammersmith-one ">
           DenDev
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="/" className="text-black text-lg font-hammersmith-one">
+            <a href="/" className="text-black text-lg font-hammersmith-one ">
               Home
             </a>
           </li>
           <li>
-            <a href="#about" className="text-black text-lg font-hammersmith-one ">
+            <a href="#about" className="text-black text-lg font-hammersmith-one  ">
               About
             </a>
           </li>
           <li>
-            <a href="menu.html" className="text-black text-lg font-hammersmith-one ">
-              Skills
+            <a href="menu.html" className="text-black text-lg font-hammersmith-one  ">
+              Skills 
             </a>
           </li>
           <li>
-            <a href="#testimonial" className="text-black text-lg font-hammersmith-one ">
+            <a href="#testimonial" className="text-black text-lg font-hammersmith-one  ">
               Portofolio
             </a>
           </li>
@@ -37,7 +37,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="container navbar-end relative">
-        <label className="swap swap-rotate">
+        <label className="swap swap-rotate ">
           {/* this hidden checkbox controls the state */}
           <input type="checkbox" />
 
@@ -63,7 +63,7 @@ const Navbar = () => {
           <div tabIndex="0" role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-7 w-7 text-black text-lg font-hammersmith-one font-bold"
+              className="h-7 w-7 text-black text-lg font-hammersmith-one  font-bold"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -83,7 +83,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/"
-                className="text-black text-lg font-hammersmith-one "
+                className="text-black text-lg font-hammersmith-one  "
               >
                 Home
               </a>
@@ -91,7 +91,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#about"
-                className="text-black text-lg font-hammersmith-one "
+                className="text-black text-lg font-hammersmith-one  "
               >
                 About
               </a>
@@ -99,7 +99,7 @@ const Navbar = () => {
             <li>
               <a
                 href="menu.html"
-                className="text-black text-lg font-hammersmith-one "
+                className="text-black text-lg font-hammersmith-one  "
               >
                 Skills
               </a>
@@ -107,7 +107,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#testimonial"
-                className="text-black text-lg font-hammersmith-one "
+                className="text-black text-lg font-hammersmith-one  "
               >
                 Portofolio
               </a>
@@ -115,7 +115,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#contact"
-                className="text-black text-lg font-hammersmith-one "
+                className="text-black text-lg font-hammersmith-one  "
               >
                 Contact
               </a>

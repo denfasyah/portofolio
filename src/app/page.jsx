@@ -1,18 +1,28 @@
 import Image from "next/image";
+import { GrDocumentDownload } from "react-icons/gr";
 
 const Page = () => {
   return (
     <>
       <div className="pt-1 relative">
         <div className="text-center mt-12">
-          <h3 className="text-sm lg:text-xl md:text-lg sm:text-md text-gray-500 font-hammersmith-one uppercase">
-            Hi There👋
-          </h3>
+          <div className="flex items-center justify-center gap-2">
+            <h3 className="text-sm lg:text-xl md:text-lg sm:text-md text-gray-500 font-hammersmith-one uppercase">
+              Hi There
+            </h3>
+            <Image
+              src="/img/sayhi.gif"
+              alt="higif"
+              width={30}
+              height={20}
+              className="mb-3"
+            />
+          </div>
           <h1 className="text-3xl lg:text-5xl md:text-4xl sm:text-3xl text-Blue font-hammersmith-one my-5 ">
             Adent Fallah Amorisyah
           </h1>
           <h2 className="text-xl text-black font-hammersmith-one font-thin">
-            Full stack developer
+            💫 Full stack developer
           </h2>
         </div>
 
@@ -71,13 +81,22 @@ const Page = () => {
         </div>
       </div>
 
+      {/* about */}
       <div className="text-center bg-white pt-10 relative">
-        <div className="">
-          <h1 className="mt-20 text-4xl text-Blue font-bold font-hammersmith-one ">
-            About <span>🌚</span>
+        <div className="flex justify-center items-center mt-20 gap-3">
+          <h1 className="text-4xl text-Blue font-bold font-hammersmith-one ">
+            About
           </h1>
-
-          <p className="mt-10 text-black text-lg font-bold text-pretty mx-auto max-w-screen-lg">
+          <Image
+            src="/img/about_me.gif"
+            alt="aboutgif"
+            width={40}
+            height={30}
+            className="mb-3"
+          />
+        </div>
+        <div className="mx-10">
+          <p className="mt-10 text-black text-lg font-bold text-left mx-auto max-w-screen-lg">
             Hi👋 Im Adent Fallah Amorisyah, a Software Engineering student at
             Bina Sarana Informatika University. 20 years old, I am focused on my
             self-development journey as a Fullstack Developer. <br /> <br />
@@ -91,13 +110,54 @@ const Page = () => {
             Fullstack Developer. <br /> Lets discuss ideas, projects, or
             collaboration opportunities!
           </p>
-
-          <button className="btn mt-5 bg-Blue text-White border-4 rounded-full border-LightBlue mb-10">
-            {" "}
-            Dwonload CV
-          </button>
         </div>
+
+        <button className="btn mt-5 bg-Blue text-White border-4 rounded-full border-LightBlue mb-10">
+          {" "}
+          <GrDocumentDownload />
+          Dwonload CV
+        </button>
       </div>
+
+      <div className="text-center bg-white pt-10 relative">
+        <div className="flex justify-center items-center mt-20 gap-3">
+          <h1 className="text-4xl text-Blue font-bold font-hammersmith-one ">
+            Skills
+          </h1>
+          <Image
+            src="/img/about_me.gif"
+            alt="aboutgif"
+            width={40}
+            height={30}
+            className="mb-3"
+          />
+        </div>
+        <div className="mx-10">
+          <p className="mt-10 text-black text-lg font-bold text-left mx-auto max-w-screen-lg">
+            Hi👋 Im Adent Fallah Amorisyah, a Software Engineering student at
+            Bina Sarana Informatika University. 20 years old, I am focused on my
+            self-development journey as a Fullstack Developer. <br /> <br />
+            My education provides a strong foundation for programming and
+            software development. I am actively involved in the developer
+            community and software development projects. I believe that
+            collaboration is the key to success, and I continue to improve my
+            skills in both frontend and backend. <br /> <br /> With a high
+            passion for technology, I always follow the latest trends and try to
+            keep learning. I am committed to being a creative and efficient
+            Fullstack Developer. <br /> Lets discuss ideas, projects, or
+            collaboration opportunities!
+          </p>
+        </div>
+
+        <button className="btn mt-5 bg-Blue text-White border-4 rounded-full border-LightBlue mb-10">
+          {" "}
+          <GrDocumentDownload />
+          Dwonload CV
+        </button>
+      </div>
+
+
+
     </>
   );
 };
