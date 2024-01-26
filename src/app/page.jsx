@@ -122,7 +122,7 @@ const Page = () => {
       <div id="skills" className="text-center bg-white pt-10 relative">
         <div className="flex justify-center items-center mt-10 gap-3">
           <h1 className="text-4xl text-Blue font-bold font-hammersmith-one ">
-            Skills 
+            Skills
           </h1>
           <Image
             src="/img/code.gif"
@@ -133,7 +133,7 @@ const Page = () => {
           />
         </div>
 
-        <div  className="lg:flex mx-10 mt-10 bg-LightBlue p-10 rounded-xl">
+        <div className="lg:flex mx-10 mt-10 bg-LightBlue p-10 rounded-xl">
           <div className="lg:w-1/2">
             <div className="flex justify-center gap-5 flex-wrap mr-10">
               <div className="tooltip hover:cursor-pointer" data-tip="Html">
@@ -166,10 +166,7 @@ const Page = () => {
                   className="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl "
                 />
               </div>
-              <div
-                className="tooltip hover:cursor-pointer"
-                data-tip="Php"
-              >
+              <div className="tooltip hover:cursor-pointer" data-tip="Php">
                 <Image
                   src="/svg/logoPhp.svg"
                   alt="codegif"
@@ -250,14 +247,69 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+
+        {/* portofolio */}
+        <div id="portofolio" className="text-center bg-white pt-10 relative">
+          <div className="flex justify-center items-center mt-10 gap-3">
+            <h1 className="text-4xl text-Blue font-bold font-hammersmith-one ">
+              Portofolio
+            </h1>
+            <Image
+              src="/img/about_me.gif"
+              alt="aboutgif"
+              width={40}
+              height={30}
+              className="mb-3"
+            />
+          </div>
+          <div className="flex justify-center mt-10 mx-10 gap-5 flex-wrap ">
+            <div className="border-2 border-Blue w-80 rounded-xl shadow-lg shadow-slate-500 pb-5">
+              <Image
+                src="/img/dennime.png"
+                alt="aboutgif"
+                width={450}
+                height={30}
+                className="mb-3 rounded-t-lg"
+              />
+              <h2 className="font-semibold text-xl font-hammersmith-one">
+                Web Responsive Design
+              </h2>
+
+              <div className="flex justify-center items-center flex-wrap border-2 border-Blue mx-20 mt-5 shadow-slate-500 shadow-sm rounded-xl">
+                <Image
+                  src="/svg/next-js.svg"
+                  alt="codegif"
+                  width={40}
+                  height={40}
+                  className="bg-slate-50 rounded-full p-2"
+                />
+                <Image
+                  src="/svg/logoTailwind.svg"
+                  alt="codegif"
+                  width={40}
+                  height={40}
+                  className="bg-slate-50 rounded-full p-2"
+                />
+              </div>
+
+              <div className="flex justify-end mt-5 gap-1 mr-2">
+                <button className="p-2 px-2 bg-Blue text-md text-White border-4 rounded-full border-LightBlue text-center text-xs">
+                  Preview
+                </button>
+                <button className="p-2 px-2 bg-Blue text-md text-White border-4 rounded-full border-LightBlue text-center text-xs">
+                  Preview
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
       </div>
     </>
   );
