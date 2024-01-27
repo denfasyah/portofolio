@@ -6,7 +6,7 @@ const Description = () => {
     <div>
       <div className="mx-10">
         <p
-          className={`mt-10 ${textClass} text-lg font-bold text-left mx-auto max-w-screen-lg`}
+          className={`mt-10 ${textClass} text-lg line-clamp-6 lg:line-clamp-none md:line-clamp-none font-bold text-left mx-auto max-w-screen-lg`}
         >
           Hi👋 Im Adent Fallah Amorisyah, a Software Engineering student active at{" "}
           <Link href="https://www.bsi.ac.id/" className="text-Bluesea">
