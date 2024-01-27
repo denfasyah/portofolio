@@ -1,7 +1,35 @@
+"use client";
+import { useState, useEffect } from "react";
+
 import Image from "next/image";
 import { GrDocumentDownload } from "react-icons/gr";
+import { MdOutlinePreview } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
+import {
+  textClass,
+  bgClass,
+  textPrimaryClass,
+  bgPrimaryClass,
+} from "../components/Navbar";
 
 const Page = () => {
+  const [tampilkanModal, setTampilkanModal] = useState(false);
+
+  useEffect(() => {
+    // Anda dapat membuka modal di sini
+    if (tampilkanModal) {
+      document.getElementById("my_modal_3").showModal();
+    }
+  }, [tampilkanModal]);
+
+  const bukaModal = () => {
+    setTampilkanModal(true);
+  };
+
+  const tutupModal = () => {
+    setTampilkanModal(false);
+  };
+
   return (
     <>
       <div className="pt-1 relative">
@@ -18,10 +46,12 @@ const Page = () => {
               className="mb-3"
             />
           </div>
-          <h1 className="text-3xl lg:text-5xl md:text-4xl sm:text-3xl text-Blue font-hammersmith-one my-5 ">
+          <h1
+            className={`text-3xl lg:text-5xl md:text-4xl sm:text-3xl text-Blue font-hammersmith-one my-5`}
+          >
             Adent Fallah Amorisyah
           </h1>
-          <h2 className="text-xl text-black font-hammersmith-one font-thin">
+          <h2 className={`text-xl ${textClass} font-hammersmith-one font-thin`}>
             💫 Full stack developer
           </h2>
         </div>
@@ -82,9 +112,9 @@ const Page = () => {
       </div>
 
       {/* about */}
-      <div id="about" className="text-center bg-white pt-10 relative">
+      <div id="about" className={`text-center ${bgClass} pt-10 relative`}>
         <div className="flex justify-center items-center mt-10 gap-3">
-          <h1 className="text-4xl text-Blue font-bold font-hammersmith-one ">
+          <h1 className="text-4xl text-Blue font-bold font-hammersmith-one">
             About
           </h1>
           <Image
@@ -96,7 +126,9 @@ const Page = () => {
           />
         </div>
         <div className="mx-10">
-          <p className="mt-10 text-black text-lg font-bold text-left mx-auto max-w-screen-lg">
+          <p
+            className={`mt-10 ${textClass} text-lg font-bold text-left mx-auto max-w-screen-lg`}
+          >
             Hi👋 Im Adent Fallah Amorisyah, a Software Engineering student at
             Bina Sarana Informatika University. 20 years old, I am focused on my
             self-development journey as a Fullstack Developer. <br /> <br />
@@ -112,14 +144,14 @@ const Page = () => {
           </p>
         </div>
 
-        <button className="btn mt-5 bg-Blue text-White border-4 rounded-full border-LightBlue mb-10">
+        <button className="btn mt-5 bg-Blue text-White border-2 rounded-full border-LightBlue mb-10 hover:bg-Bluesea">
           {" "}
           <GrDocumentDownload />
           Dwonload CV
         </button>
       </div>
 
-      <div id="skills" className="text-center bg-white pt-10 relative">
+      <div id="skills" className={`text-center ${bgClass} pt-10 relative`}>
         <div className="flex justify-center items-center mt-10 gap-3">
           <h1 className="text-4xl text-Blue font-bold font-hammersmith-one ">
             Skills
@@ -135,7 +167,7 @@ const Page = () => {
 
         <div className="lg:flex mx-10 mt-10 bg-LightBlue p-10 rounded-xl">
           <div className="lg:w-1/2">
-            <div className="flex justify-center gap-5 flex-wrap mr-10">
+            <div className="flex justify-center gap-5 flex-wrap lg:mr-10">
               <div className="tooltip hover:cursor-pointer" data-tip="Html">
                 <Image
                   src="/svg/logoHtml.svg"
@@ -226,7 +258,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2 mt-5 lg:mt-0">
+          <div className="lg:w-1/2 mt-10 lg:mt-0">
             <div className="carousel rounded-box">
               <div className="carousel-item gap-2">
                 <Image
@@ -234,7 +266,7 @@ const Page = () => {
                   alt="codegif"
                   width={400}
                   height={400}
-                  className="mb-3  "
+                  className="mb-3 object-cover "
                 />
                 <Image
                   src="/img/frontend.png"
@@ -249,7 +281,10 @@ const Page = () => {
         </div>
 
         {/* portofolio */}
-        <div id="portofolio" className="text-center bg-white pt-10 relative">
+        <div
+          id="portofolio"
+          className={`text-center ${bgClass} pt-10 relative`}
+        >
           <div className="flex justify-center items-center mt-10 gap-3">
             <h1 className="text-4xl text-Blue font-bold font-hammersmith-one ">
               Portofolio
@@ -262,45 +297,75 @@ const Page = () => {
               className="mb-3"
             />
           </div>
+
           <div className="flex justify-center mt-10 mx-10 gap-5 flex-wrap ">
-            <div className="border-2 border-Blue w-80 rounded-xl shadow-lg shadow-slate-500 pb-5">
-              <Image
-                src="/img/dennime.png"
-                alt="aboutgif"
-                width={450}
-                height={30}
-                className="mb-3 rounded-t-lg"
-              />
-              <h2 className="font-semibold text-xl font-hammersmith-one">
-                Web Responsive Design
-              </h2>
+            {/* modal */}
+            <div>
+              <button className="" onClick={bukaModal}>
+                <div className="border-2 border-Blue w-80 rounded-xl shadow-lg shadow-slate-500 pb-5 hover:transform hover:scale-95 transition-transform duration-500 ease-in-out hover:shadow-none cursor-pointer">
+                  <Image
+                    src="/img/dennime.png"
+                    alt="aboutgif"
+                    width={450}
+                    height={30}
+                    className="mb-3 rounded-t-lg"
+                  />
+                  <h2 className="font-semibold text-xl font-hammersmith-one">
+                    Web Responsive Design
+                  </h2>
+                  {/* <div className=" border-2 border-Blue mt-5 shadow-slate-500 shadow-sm rounded-r-2xl rounded-bl-2xl inline-block min-w-[min-width]">
+                <div className="flex justify-start gap-2 p-1">
+                  <Image
+                    src="/svg/next-js.svg"
+                    alt="codegif"
+                    width={30}
+                    height={30}
+                    className="bg-slate-50 rounded-full p-1"
+                  />
+                  <Image
+                    src="/svg/logoTailwind.svg"
+                    alt="codegif"
+                    width={30}
+                    height={30}
+                    className="bg-slate-50 rounded-full p-1"
+                  />
+                </div>
+              </div> */}
 
-              <div className="flex justify-center items-center flex-wrap border-2 border-Blue mx-20 mt-5 shadow-slate-500 shadow-sm rounded-xl">
-                <Image
-                  src="/svg/next-js.svg"
-                  alt="codegif"
-                  width={40}
-                  height={40}
-                  className="bg-slate-50 rounded-full p-2"
-                />
-                <Image
-                  src="/svg/logoTailwind.svg"
-                  alt="codegif"
-                  width={40}
-                  height={40}
-                  className="bg-slate-50 rounded-full p-2"
-                />
-              </div>
-
-              <div className="flex justify-end mt-5 gap-1 mr-2">
-                <button className="p-2 px-2 bg-Blue text-md text-White border-4 rounded-full border-LightBlue text-center text-xs">
-                  Preview
-                </button>
-                <button className="p-2 px-2 bg-Blue text-md text-White border-4 rounded-full border-LightBlue text-center text-xs">
-                  Preview
-                </button>
-              </div>
+                  <div className="flex justify-end mt-5 gap-1 mr-2">
+                    <button className=" h-10 px-2 flex items-center gap-1  bg-Blue text-md text-White border-2 rounded-full border-LightBlue text-center text-xs hover:bg-Bluesea">
+                      <MdOutlinePreview className="w-4 h-4" />
+                      Preview
+                    </button>
+                    <button
+                      onClick={bukaModal}
+                      className="h-10 px-3 flex items-center gap-1  bg-Blue text-md text-White border-2 rounded-full border-LightBlue text-center text-xs hover:bg-Bluesea"
+                    >
+                      <FaGithub className="w-4 h-4" />
+                      Details
+                    </button>
+                  </div>
+                </div>
+              </button>
+              <dialog id="my_modal_3" className="modal">
+                <div className="modal-box">
+                  <form method="dialog">
+                    {/* jika ada tombol dalam formulir, itu akan menutup modal */}
+                    <button
+                      className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                      onClick={tutupModal}
+                    >
+                      ✕
+                    </button>
+                  </form>
+                  <h3 className="font-bold text-lg">Halo!</h3>
+                  <p className="py-4">
+                    Tekan tombol ESC atau klik tombol ✕ untuk menutup
+                  </p>
+                </div>
+              </dialog>
             </div>
+            {/*  */}
           </div>
 
           <br />

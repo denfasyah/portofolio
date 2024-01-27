@@ -20,11 +20,16 @@ module.exports = {
       colors: {
         Grey: "#A6A6A6",
         Blue: "#004AAD",
+        Bluesea: "#005bad",
         LightBlue: "#E5EDF7",
         White: "#fefffd",
         Background: "#1a1d26",
+        BlueTints : "#6692ce"
       },
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "black",],
+  },
 };

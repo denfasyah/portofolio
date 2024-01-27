@@ -1,37 +1,64 @@
+"use client"
+import {useEffect,useState} from "react";
 import Link from 'next/link'
 
+
 const Navbar = () => {
+  const [theme,setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+
+  const handleToogle = (e) => {
+    if(e.target.checked) {
+      setTheme("black");
+    } else {
+      setTheme("light");
+    }
+  };
+
+  useEffect(() =>{
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme",localTheme);
+  }, [theme]);
+
+  const textClass = theme === "black" ? "text-white" : "text-black";
+  const bgClass = theme === "black" ? "bg-black" : "bg-white";
+  const textPrimaryClass = theme === "black" ? "text-BlueTints" : "text-Blue";
+  const bgPrimaryClass = theme === "black" ? "bg-Bluesea" : "bg-Blue";
+  const fillPrimaryClass = theme === "black" ? "fill-BlueTints" : "fill-Blue";
+
   return (
     <div className="navbar fixed z-30 backdrop-blur-2xl bg-opacity-10">
       <div className="navbar-start">
-        <Link href="/" className="btn btn-ghost text-xl text-Blue font-bold font-hammersmith-one ">
+        <Link href="/" className={`btn btn-ghost text-xl text-Blue font-bold font-hammersmith-one`}>
           DenDev
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link href="/"  className="text-black text-lg font-hammersmith-one ">
+            <Link href="/"  className={`text-lg font-hammersmith-one ${textClass}`}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="#about"  className="text-black text-lg font-hammersmith-one  ">
+            <Link href="#about"  className={`text-lg font-hammersmith-one ${textClass}`}>
               About
             </Link>
           </li>
           <li>
-            <Link href="#skills"  className="text-black text-lg font-hammersmith-one scroll-smooth">
+            <Link href="#skills"  className={`text-lg font-hammersmith-one ${textClass}`}>
               Skills 
             </Link>
           </li>
           <li>
-            <Link href="#portofolio"  className="text-black text-lg font-hammersmith-one  ">
+            <Link href="#portofolio"  className={`text-lg font-hammersmith-one ${textClass}`}>
               Portofolio
             </Link>
           </li>
           <li>
-            <Link href="#contact"  className="text-black text-lg font-hammersmith-one ">
+            <Link href="#contact"  className={`text-lg font-hammersmith-one ${textClass}`}>
               Contact
             </Link>
           </li>
@@ -40,11 +67,11 @@ const Navbar = () => {
       <div className="container navbar-end relative">
         <label className="swap swap-rotate ">
           {/* this hidden checkbox controls the state */}
-          <input type="checkbox" />
+          <input type="checkbox" onChange={handleToogle} checked={theme === "light" ? false :true}/>
 
           {/* sun icon */}
           <svg
-            className="swap-on fill-Blue w-7 h-7 mb-2"
+            className={`swap-on fill-Blue w-7 h-7 mb-2`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -53,7 +80,7 @@ const Navbar = () => {
 
           {/* moon icon */}
           <svg
-            className="swap-off fill-Blue w-7 h-7 mb-2"
+            className={`swap-off fill-Blue w-7 h-7 mb-2`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -84,7 +111,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/"
-                 className="text-black text-lg font-hammersmith-one  "
+                 className={`text-lg font-hammersmith-one ${textClass}`}
               >
                 Home
               </Link>
@@ -92,7 +119,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="#about"
-                 className="text-black text-lg font-hammersmith-one  "
+                 className={`text-lg font-hammersmith-one ${textClass}`}
               >
                 About
               </Link>
@@ -100,7 +127,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="#skills"
-                 className="text-black text-lg font-hammersmith-one  "
+                 className={`text-lg font-hammersmith-one ${textClass}`}
               >
                 Skills
               </Link>
@@ -108,7 +135,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="#portofolio"
-                 className="text-black text-lg font-hammersmith-one  "
+                 className={`text-lg font-hammersmith-one ${textClass}`}
               >
                 Portofolio
               </Link>
@@ -116,7 +143,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="#contact"
-                 className="text-black text-lg font-hammersmith-one  "
+                 className={`text-lg font-hammersmith-one ${textClass}`}
               >
                 Contact
               </Link>
