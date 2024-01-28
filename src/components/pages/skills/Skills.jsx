@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { bgClass } from "@/components/Navbar";
 import TitleSection from "@/components/TitleSection";

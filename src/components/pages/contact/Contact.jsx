@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TitleSection from "@/components/TitleSection";
 import { bgClass } from "@/components/Navbar";
+import { IoIosSend } from "react-icons/io";
 
 const Contact = () => {
   return (
@@ -50,7 +51,7 @@ const Contact = () => {
             </div>
 
             <button className="btn mt-5 bg-Blue text-White border-2 shadow-xl  rounded-full border-LightBlue mb-10 hover:bg-Bluesea">
-              Send
+            <IoIosSend /> Send
             </button>
           </div>
         </form>

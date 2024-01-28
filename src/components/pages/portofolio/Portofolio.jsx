@@ -4,12 +4,9 @@ import Image from "next/image";
 import { MdOutlinePreview } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import TitleSection from "@/components/TitleSection";
-import {
-  textClass,
-  bgClass,
-  textPrimaryClass,
-  bgPrimaryClass,
-} from "@/components/Navbar";
+import { bgClass } from "@/components/Navbar";
+import Link from "next/link";
+
 const Portofolio = () => {
   const [tampilkanModal, setTampilkanModal] = useState(false);
 
@@ -43,19 +40,18 @@ const Portofolio = () => {
         <div className="flex justify-center mt-10 mx-10 gap-5 flex-wrap ">
           {/* modal */}
           <div>
-            <button className="" onClick={bukaModal}>
-              <div className="border-2 border-Blue w-80 rounded-xl shadow-lg shadow-slate-500 pb-5 hover:transform hover:scale-95 transition-transform duration-500 ease-in-out hover:shadow-none cursor-pointer">
-                <Image
-                  src="/img/dennime.png"
-                  alt="aboutgif"
-                  width={450}
-                  height={30}
-                  className="mb-3 rounded-t-lg"
-                />
-                <h2 className="font-semibold text-xl font-hammersmith-one">
-                  Web Responsive Design
-                </h2>
-                {/* <div className=" border-2 border-Blue mt-5 shadow-slate-500 shadow-sm rounded-r-2xl rounded-bl-2xl inline-block min-w-[min-width]">
+            <div className="border-2 border-Blue w-80 rounded-xl shadow-lg shadow-slate-500 pb-5">
+              <Image
+                src="/img/dennime.png"
+                alt="aboutgif"
+                width={450}
+                height={30}
+                className="mb-3 rounded-t-lg"
+              />
+              <h2 className="font-semibold text-xl font-hammersmith-one">
+                Web Responsive Design
+              </h2>
+              {/* <div className=" border-2 border-Blue mt-5 shadow-slate-500 shadow-sm rounded-r-2xl rounded-bl-2xl inline-block min-w-[min-width]">
                 <div className="flex justify-start gap-2 p-1">
                   <Image
                     src="/svg/next-js.svg"
@@ -74,21 +70,24 @@ const Portofolio = () => {
                 </div>
               </div> */}
 
-                <div className="flex justify-end mt-5 gap-1 mr-2">
-                  <button className=" h-10 px-2 flex items-center gap-1  bg-Blue text-md text-White border-2 rounded-full border-LightBlue text-center text-xs hover:bg-Bluesea">
-                    <MdOutlinePreview className="w-4 h-4" />
-                    Preview
-                  </button>
-                  <button
-                    onClick={bukaModal}
-                    className="h-10 px-3 flex items-center gap-1  bg-Blue text-md text-White border-2 rounded-full border-LightBlue text-center text-xs hover:bg-Bluesea"
-                  >
-                    <FaGithub className="w-4 h-4" />
-                    Details
-                  </button>
-                </div>
+              <div className="flex justify-end mt-5 gap-1 mr-2">
+                <Link
+                  href="https://dennime.vercel.app/"
+                  className=" h-10 px-2 flex items-center gap-1  bg-Blue text-md text-White border-2 rounded-full border-LightBlue text-center text-xs hover:bg-Bluesea"
+                >
+                  <MdOutlinePreview className="w-4 h-4" />
+                  Preview
+                </Link>
+
+                <button
+                  onClick={bukaModal}
+                  className="h-10 px-3 flex items-center gap-1  bg-Blue text-md text-White border-2 rounded-full border-LightBlue text-center text-xs hover:bg-Bluesea"
+                >
+                  <FaGithub className="w-4 h-4" />
+                  Details
+                </button>
               </div>
-            </button>
+            </div>
             <dialog id="my_modal_3" className="modal">
               <div className="modal-box">
                 <form method="dialog">

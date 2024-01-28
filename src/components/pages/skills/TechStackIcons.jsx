@@ -57,6 +57,15 @@ const TechStackIcons = () => {
               className="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl "
             />
           </div>
+          <div className="tooltip hover:cursor-pointer" data-tip="Mysql">
+            <Image
+              src="/svg/logoMysql.svg"
+              alt="codegif"
+              width={60}
+              height={60}
+              className="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl "
+            />
+          </div>
 
           <div className="tooltip hover:cursor-pointer" data-tip="Node Js">
             <Image
