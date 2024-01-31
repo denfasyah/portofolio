@@ -1,12 +1,11 @@
 import Image from "next/image";
 import TitleSection from "@/components/TitleSection";
-import { bgClass } from "@/components/Navbar";
 import Card from "./Card";
 
 const Portofolio = () => {
   return (
     <div>
-      <div id="portofolio" className={`text-center ${bgClass} pt-10 relative`}>
+      <div id="portofolio" className={`text-center bg-white pt-10 relative`}>
         <div className="flex justify-center items-center mt-10 gap-3">
           <TitleSection title="Portofolio" />
           <Image

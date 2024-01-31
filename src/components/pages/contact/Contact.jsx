@@ -1,11 +1,10 @@
 import Image from "next/image";
 import TitleSection from "@/components/TitleSection";
-import { bgClass } from "@/components/Navbar";
 import { IoIosSend } from "react-icons/io";
 
 const Contact = () => {
   return (
-    <div id="contact" className={`text-center ${bgClass} pt-10 relative`}>
+    <div id="contact" className={`text-center bg-white pt-10 relative`}>
       <div className="flex justify-center items-center mt-10 gap-3">
         <TitleSection title="Contact" />
         <Image
@@ -26,7 +25,7 @@ const Contact = () => {
                 id="fullName"
                 name="fullName"
                 placeholder="Name"
-                className="w-full py-2 px-4 border-2 border-Blue rounded-tr-md rounded-bl-md rounded-br-md"
+                className={`w-full  py-2 px-4 border-2 border-Blue rounded-tr-md rounded-bl-md rounded-br-md`}
               />
             </div>
 

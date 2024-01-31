@@ -1,4 +1,3 @@
-import { textClass } from "@/components/Navbar";
 const Introduction = ({me,role}) => {
   return (
     <div>
@@ -7,7 +6,7 @@ const Introduction = ({me,role}) => {
       >
         {me}
       </h1>
-      <h2 className={`text-xl ${textClass} font-hammersmith-one font-thin`}>
+      <h2 className={`text-xl text-black font-hammersmith-one font-thin`}>
         💫 {role}
       </h2>
     </div>

@@ -1,13 +1,12 @@
 "use client";
 import Image from "next/image";
-import { bgClass } from "@/components/Navbar";
 import TitleSection from "@/components/TitleSection";
 import TechStackIcons from "./TechStackIcons";
 import Certificates from "./Certificates";
 
 const Skills = () => {
   return (
-    <div id="skills" className={`text-center ${bgClass} pt-10 relative`}>
+    <div id="skills" className={`text-center bg-white pt-10 relative`}>
       <div className="flex justify-center items-center mt-10 gap-3">
         <TitleSection title="Skills" />
         <Image

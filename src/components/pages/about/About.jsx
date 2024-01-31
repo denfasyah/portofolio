@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { bgClass } from "@/components/Navbar";
 import TitleSection from "@/components/TitleSection";
 import Description from "./Description";
 import Button from "./Button";
@@ -7,7 +6,7 @@ import Button from "./Button";
 const About = () => {
   return (
     <div>
-      <div id="about" className={`text-center ${bgClass} pt-10 relative`}>
+      <div id="about" className={`text-center bg-white pt-10 relative`}>
         <div className="flex justify-center items-center mt-10 gap-3">
           <TitleSection title="About" />
           <Image
