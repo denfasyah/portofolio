@@ -6,7 +6,7 @@ import Button from "./Button";
 const About = () => {
   return (
     <div>
-      <div id="about" className={`text-center bg-white pt-10 relative`}>
+      <div id="about" className={`text-center bg-white pt-10`}>
         <div className="flex justify-center items-center mt-10 gap-3">
           <TitleSection title="About" />
           <Image
