@@ -37,7 +37,30 @@ const Card = () => {
           <h2 className="font-semibold text-xl font-hammersmith-one">
             Dennime
           </h2>
-          <div className="flex justify-end mt-5 gap-1 mr-2">
+          <div className="flex justify-start gap-2 ">
+            <Image
+              src="/svg/logoJavascript.svg"
+              alt="codegif"
+              width={30}
+              height={30}
+              className="bg-slate-50 rounded-full p-1"
+            />
+            <Image
+              src="/svg/logoTailwind.svg"
+              alt="codegif"
+              width={30}
+              height={30}
+              className="bg-slate-50 rounded-full p-1"
+            />
+            <Image
+              src="/svg/next-js.svg"
+              alt="codegif"
+              width={30}
+              height={30}
+              className="bg-slate-50 rounded-full p-1"
+            />
+          </div>
+          <div className="flex justify-end mt-2 gap-1 mr-2">
             <Link
               href="https://dennime.vercel.app/"
               className=" h-10 px-2 flex items-center gap-1  bg-Blue text-md text-White border-2 rounded-full border-LightBlue text-center text-xs hover:bg-Bluesea"
@@ -46,17 +69,75 @@ const Card = () => {
               Preview
             </Link>
 
-            <button
-              onClick={bukaModal}
-              className="h-10 px-3 flex items-center gap-1  bg-Blue text-md text-White border-2 rounded-full border-LightBlue text-center text-xs hover:bg-Bluesea"
+            <Link
+              href="https://github.com/denfasyah/dennime"
+              className=" h-10 px-2 flex items-center gap-1  bg-Blue text-md text-White border-2 rounded-full border-LightBlue text-center text-xs hover:bg-Bluesea"
             >
               <FaGithub className="w-4 h-4" />
               Details
-            </button>
+            </Link>
           </div>
         </div>
 
-        <Modal click={tutupModal}/>
+        <Modal click={tutupModal} />
+      </div>
+
+      {/* 2 */}
+      <div>
+        <div className="border-2 border-Blue w-80 rounded-xl shadow-lg shadow-slate-500 pb-5">
+          <Image
+            src="/img/denwheater.png"
+            alt="aboutgif"
+            width={450}
+            height={30}
+            className="mb-3 rounded-t-lg"
+          />
+          <h2 className="font-semibold text-xl font-hammersmith-one">
+            DenWheater
+          </h2>
+          <div className="flex justify-start gap-2 ">
+            <Image
+              src="/svg/logoHtml.svg"
+              alt="codegif"
+              width={30}
+              height={30}
+              className="bg-slate-50 rounded-full p-1"
+            />
+            <Image
+              src="/svg/logoCss.svg"
+              alt="codegif"
+              width={30}
+              height={30}
+              className="bg-slate-50 rounded-full p-1"
+            />
+            <Image
+              src="/svg/logoJavascript.svg"
+              alt="codegif"
+              width={30}
+              height={30}
+              className="bg-slate-50 rounded-full p-1"
+            />
+          </div>
+          <div className="flex justify-end mt-2 gap-1 mr-2">
+            <Link
+              href="https://den-wheater.vercel.app/"
+              className=" h-10 px-2 flex items-center gap-1  bg-Blue text-md text-White border-2 rounded-full border-LightBlue text-center text-xs hover:bg-Bluesea"
+            >
+              <MdOutlinePreview className="w-4 h-4" />
+              Preview
+            </Link>
+
+            <Link
+              href="https://github.com/denfasyah/wheater-app"
+              className=" h-10 px-2 flex items-center gap-1  bg-Blue text-md text-White border-2 rounded-full border-LightBlue text-center text-xs hover:bg-Bluesea"
+            >
+              <FaGithub className="w-4 h-4" />
+              Details
+            </Link>
+          </div>
+        </div>
+
+        <Modal click={tutupModal} />
       </div>
       {/*  */}
     </div>
